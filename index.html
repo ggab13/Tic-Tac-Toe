@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <header>
+            <h1><span>T</span><span>i</span><span>c</span> <span>-</span> <span>T</span><span>a</span><span>c</span>
+                <span>-</span> <span>T</span><span>o</span><span>e</span>
+            </h1>
+        </header>
+        <div class="choice">
+
+            <form action="">
+                <label for="player1">Player 1 name:</label><br>
+                <input type="text" id="player1" name="player1" value=""><br>
+                <label for="player2">Player 2 name:</label><br>
+                <input type="text" id="player2" name="player2" value=""><br><br>
+                <input type="button" id="save" value="Save">
+            </form>
+        </div>
+
+        <div class="game--container">
+
+            <div class="players">
+                <div class="player1">
+                    <p id="p1"> is <span class="pSign">X</span></p>
+                    <p>Score</p>
+                    <p id="p1Score">0</p>
+                </div>
+            </div>
+            <div class="board">
+                <div class="field" data-field="1"></div>
+                <div class="field" data-field="2"></div>
+                <div class="field" data-field="3"></div>
+                <div class="field" data-field="4"></div>
+                <div class="field" data-field="5"></div>
+                <div class="field" data-field="6"></div>
+                <div class="field" data-field="7"></div>
+                <div class="field" data-field="8"></div>
+                <div class="field" data-field="9"></div>
+            </div>
+            <div class="players">
+                <div class="player2">
+                    <p id="p2"> is <span class="pSign">O</span></p>
+                    <p>Score</p>
+                    <p id="p2Score">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="made-by">
+            <h2 id="ggab13">Created by <span id="valsz">|</span> <a href="https://github.com/ggab13">ggab13</a> <img
+                    src="github.png" alt=""></h2>
+            <div class="stack"><img src="images/stack.png" alt=""></div>
+        </div>
+
+    </div>
+    <div class="restart ">
+        <p id="winningText"></p>
+        <button id="restart" class="hidden">Restart</button>
+    </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

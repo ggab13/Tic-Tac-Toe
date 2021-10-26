@@ -1,0 +1,468 @@
+body {
+  background-color: black;
+  -webkit-animation: start 3s 1;
+          animation: start 3s 1;
+  -webkit-animation: loading 3s 1;
+          animation: loading 3s 1;
+}
+
+body .start {
+  -webkit-animation: start 3s 1;
+          animation: start 3s 1;
+}
+
+body #save {
+  background-color: #EE3E3E;
+  font-family: 'Odibee Sans', cursive;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  border: 2px solid yellow;
+  width: 5rem;
+  height: 2rem;
+}
+
+body #save:hover {
+  opacity: 0.9;
+  color: #1344F1;
+}
+
+body .container {
+  margin: 100px auto;
+  width: 900px;
+  height: auto;
+  background-color: #77248C;
+  text-align: center;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 16px;
+  border: solid 10px white;
+  opacity: 1;
+}
+
+body .container .choice {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 300px;
+}
+
+body .container .choice form {
+  color: yellow;
+  font-size: 2rem;
+}
+
+body .container .choice form input[type=text] {
+  margin: 0.5rem 0px;
+  text-align: center;
+  height: 2rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  background-color: #1344F1;
+  border: none;
+  border: 2px solid red;
+  border-radius: 5px;
+  color: #EE3E3E;
+  font-family: 'Odibee Sans', cursive;
+}
+
+body .container .choice form input[type=text]:hover {
+  opacity: 0.8;
+}
+
+body .container .choice form input[type=text]:focus {
+  outline: none;
+}
+
+body .container h1 {
+  font-weight: bold;
+  color: white;
+  font-size: 3rem;
+}
+
+body .container h1 span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  -webkit-animation: bounce 1s ease infinite alternate;
+          animation: bounce 1s ease infinite alternate;
+  font-family: 'Titan One'cursive;
+  font-size: 80px;
+  color: #EE3E3E;
+  text-shadow: 0 1px 0 #F1EB4C, 0 2px 0 #F1EB4C, 0 3px 0 #F1EB4C, 0 4px 0 #F1EB4C, 0 5px 0 #F1EB4C, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+body .container h1 span:nth-child(2) {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+body .container h1 span:nth-child(3) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+body .container h1 span:nth-child(4) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+body .container h1 span:nth-child(5) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+body .container h1 span:nth-child(6) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+body .container h1 span:nth-child(7) {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+body .container h1 span:nth-child(8) {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+body .container h1 span:nth-child(9) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+body .container h1 span:nth-child(10) {
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
+body .container h1 span:nth-child(11) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+body .container .game--container {
+  margin: 100px auto;
+  opacity: 1;
+  width: 800px;
+  display: none;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  font-size: 2em;
+  -webkit-animation: loading 3s 1;
+          animation: loading 3s 1;
+}
+
+body .container .game--container .pSign {
+  font-size: 60px;
+  color: white;
+}
+
+body .container .game--container .pName {
+  color: white;
+  font-size: 35px;
+}
+
+body .container .game--container .players {
+  overflow: hidden;
+}
+
+body .container .game--container .player1 {
+  background-color: #EE3E3E;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+body .container .game--container .player2 {
+  background-color: #1344F1;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+body .container .game--container .board {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .game--container .board .field {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+  background-color: #F1EB4C;
+}
+
+body .container .game--container .board .disabledbutton {
+  pointer-events: none;
+}
+
+body .container .game--container .board .field:hover {
+  background-color: #ebe9e9;
+}
+
+body .container .game--container .board .x,
+body .container .game--container .board .o {
+  cursor: not-allowed;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body .container .game--container .board .x {
+  cursor: not-allowed;
+}
+
+body .container .game--container .board .x::before,
+body .container .game--container .board .x::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 90px;
+  background-color: #EE3E3E;
+  -webkit-animation: mymove 0.2s;
+          animation: mymove 0.2s;
+}
+
+body .container .game--container .board .x::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .container .game--container .board .x::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body .container .game--container .board .o::before,
+body .container .game--container .board .o::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  -webkit-animation: mymove 0.2s;
+          animation: mymove 0.2s;
+}
+
+body .container .game--container .board .o::before {
+  width: 81px;
+  height: 81px;
+  background-color: #1344F1;
+}
+
+body .container .game--container .board .o::after {
+  width: 63px;
+  height: 63px;
+  background-color: #F1EB4C;
+}
+
+body .container .game--container .board :first-child,
+body .container .game--container .board :nth-child(2),
+body .container .game--container .board :nth-child(3) {
+  border-top: none;
+}
+
+body .container .game--container .board :first-child,
+body .container .game--container .board :nth-child(4),
+body .container .game--container .board :nth-child(7) {
+  border-left: none;
+}
+
+body .container .game--container .board :last-child,
+body .container .game--container .board :nth-child(3),
+body .container .game--container .board :nth-child(6) {
+  border-right: none;
+}
+
+body .container .game--container .board :last-child,
+body .container .game--container .board :nth-child(7),
+body .container .game--container .board :nth-child(8) {
+  border-bottom: none;
+}
+
+body .visible {
+  position: absolute;
+  background-color: #EE3E3E;
+  font-family: 'Odibee Sans', cursive;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border: 2px solid yellow;
+  width: auto;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+body .hidden {
+  display: none;
+}
+
+body .restart {
+  width: 300px;
+  position: absolute;
+  letter-spacing: 0.2rem;
+  top: 30%;
+  left: 50%;
+  margin-left: -75px;
+}
+
+body #restart {
+  background-color: #EE3E3E;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  border: 2px solid yellow;
+  width: 10rem;
+  height: 3rem;
+}
+
+body #winningText {
+  font-size: 4rem;
+  color: white;
+  font-family: 'Odibee Sans', cursive;
+}
+
+.made-by #ggab13 {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-top: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.made-by #ggab13 a {
+  text-decoration: none;
+  color: black;
+}
+
+.made-by #ggab13 a:hover {
+  color: white;
+}
+
+.made-by #ggab13 #valsz {
+  color: #fcc688;
+}
+
+.made-by #ggab13 img {
+  width: 50px;
+}
+
+.made-by .stack img {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  margin-right: -150px;
+  z-index: -1;
+  width: 22%;
+  height: auto;
+  overflow: hidden;
+  opacity: 0.5;
+  -webkit-filter: drop-shadow(2px 2px 2px #fcc688);
+  filter: drop-shadow(2px 2px 2px #fcc688);
+  -webkit-animation: slideIn 5s;
+  animation: slideIn 5s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  50% {
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  50% {
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes start {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes start {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    top: 5px;
+    text-shadow: 0 1px 0 #1344F1, 0 2px 0 #1344F1, 0 3px 0 #1344F1, 0 4px 0 #1344F1, 0 5px 0 #1344F1, 0 6px 0 #1344F1, 0 7px 0 #1344F1, 0 8px 0 #1344F1, 0 9px 0 #1344F1, 0 50px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes bounce {
+  100% {
+    top: 5px;
+    text-shadow: 0 1px 0 #1344F1, 0 2px 0 #1344F1, 0 3px 0 #1344F1, 0 4px 0 #1344F1, 0 5px 0 #1344F1, 0 6px 0 #1344F1, 0 7px 0 #1344F1, 0 8px 0 #1344F1, 0 9px 0 #1344F1, 0 50px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+/*# sourceMappingURL=style.css.map */

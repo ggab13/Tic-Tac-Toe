@@ -1,0 +1,460 @@
+$field-size: 100px;
+$mark-size: $field-size * .9;
+
+body {
+    background-color: black;
+    animation: start 3s 1;
+    animation: loading 3s 1;
+
+
+    .start {
+        animation: start 3s 1;
+    }
+
+    #save {
+        background-color: #EE3E3E;
+        font-family: 'Odibee Sans', cursive;
+        letter-spacing: 0.2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        border: 2px solid yellow;
+        width: 5rem;
+        height: 2rem;
+    }
+
+    #save:hover {
+        opacity: 0.9;
+        color: #1344F1;
+    }
+
+    .container {
+        margin: 100px auto;
+        width: 900px;
+        height: auto;
+        background-color: #77248C;
+        text-align: center;
+        font-family: 'Odibee Sans', cursive;
+        font-size: 16px;
+        border: solid 10px white;
+        opacity: 1;
+
+
+
+
+        .choice {
+            margin: 0 auto;
+            padding: 1rem;
+            width: 300px;
+
+
+            form {
+                color: yellow;
+                font-size: 2rem;
+
+
+                input[type=text] {
+                    margin: 0.5rem 0px;
+                    text-align: center;
+                    height: 2rem;
+                    width: 10rem;
+                    font-size: 1.5rem;
+                    background-color: #1344F1;
+                    border: none;
+                    border: 2px solid red;
+                    border-radius: 5px;
+                    color: #EE3E3E;
+                    font-family: 'Odibee Sans', cursive;
+
+                }
+
+                input[type=text]:hover {
+                    opacity: 0.8;
+
+                }
+
+                input[type=text]:focus {
+                    outline: none;
+                }
+
+
+            }
+        }
+
+
+
+        h1 {
+            font-weight: bold;
+            color: white;
+            font-size: 3rem;
+
+            span {
+                position: relative;
+                top: 20px;
+                display: inline-block;
+                animation: bounce 1s ease infinite alternate;
+                font-family: 'Titan One'cursive;
+                font-size: 80px;
+                color: #EE3E3E;
+                text-shadow: 0 1px 0 #F1EB4C,
+                    0 2px 0 #F1EB4C,
+                    0 3px 0 #F1EB4C,
+                    0 4px 0 #F1EB4C,
+                    0 5px 0 #F1EB4C,
+                    0 6px 0 transparent,
+                    0 7px 0 transparent,
+                    0 8px 0 transparent,
+                    0 9px 0 transparent,
+                    0 10px 10px rgba(0, 0, 0, 0.4);
+            }
+
+            span:nth-child(2) {
+                animation-delay: .1s;
+            }
+
+            span:nth-child(3) {
+                animation-delay: .2s;
+            }
+
+            span:nth-child(4) {
+                animation-delay: .3s;
+            }
+
+            span:nth-child(5) {
+                animation-delay: .4s;
+            }
+
+            span:nth-child(6) {
+                animation-delay: .5s;
+            }
+
+            span:nth-child(7) {
+                animation-delay: .6s;
+            }
+
+            span:nth-child(8) {
+                animation-delay: .7s;
+            }
+
+            span:nth-child(9) {
+                animation-delay: .8s;
+            }
+
+            span:nth-child(10) {
+                animation-delay: .9s;
+            }
+
+            span:nth-child(11) {
+                animation-delay: 1s;
+            }
+
+
+        }
+
+
+
+        .game--container {
+
+
+            margin: 100px auto;
+            opacity: 1;
+            width: 800px;
+            display: none;
+            grid-template-columns: 1fr 2fr 1fr;
+            text-align: center;
+            font-size: 2em;
+            animation: loading 3s 1;
+
+
+            .pSign {
+                font-size: 60px;
+                color: white;
+            }
+
+            .pName {
+                color: white;
+                font-size: 35px;
+
+            }
+
+            .players {
+
+                overflow: hidden;
+
+            }
+
+            .player1 {
+
+                background-color: #EE3E3E;
+                border: 3px solid white;
+                border-radius: 5px;
+            }
+
+            .player2 {
+
+                background-color: #1344F1;
+                border: 3px solid white;
+                border-radius: 5px;
+            }
+
+
+            .board {
+
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                justify-content: center;
+
+                .field {
+                    width: $field-size;
+                    height: $field-size;
+                    border: 1px solid black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    cursor: pointer;
+                    background-color: #F1EB4C;
+                }
+
+                .disabledbutton {
+                    pointer-events: none;
+                }
+
+                .field:hover {
+                    background-color: rgb(235, 233, 233);
+
+                }
+
+                .x,
+                .o {
+                    cursor: not-allowed;
+
+                }
+
+                @keyframes mymove {
+                    from {
+                        opacity: 0.1;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                .x {
+                    cursor: not-allowed;
+                }
+
+                .x::before,
+                .x::after {
+                    content: "";
+                    position: absolute;
+                    width: ($mark-size) * .1;
+                    height: ($mark-size);
+                    background-color: #EE3E3E;
+                    animation: mymove 0.2s;
+                }
+
+                .x::before {
+                    transform: rotate(45deg);
+                }
+
+
+                .x::after {
+                    transform: rotate(-45deg);
+                }
+
+                .o::before,
+                .o::after {
+                    content: "";
+                    position: absolute;
+                    border-radius: 50%;
+                    animation: mymove 0.2s;
+                }
+
+                .o::before {
+                    width: $mark-size*.9;
+                    height: $mark-size*.9;
+                    background-color: #1344F1;
+                }
+
+                .o::after {
+                    width: $mark-size * .7;
+                    height: $mark-size * .7;
+                    background-color: #F1EB4C;
+
+                }
+
+                :first-child,
+                :nth-child(2),
+                :nth-child(3) {
+                    border-top: none;
+
+                }
+
+                :first-child,
+                :nth-child(4),
+                :nth-child(7) {
+                    border-left: none;
+                }
+
+                :last-child,
+                :nth-child(3),
+                :nth-child(6) {
+                    border-right: none;
+                }
+
+                :last-child,
+                :nth-child(7),
+                :nth-child(8) {
+                    border-bottom: none;
+                }
+
+
+
+            }
+        }
+
+    }
+
+    .visible {
+        position: absolute;
+
+        background-color: #EE3E3E;
+        font-family: 'Odibee Sans', cursive;
+        letter-spacing: 0.2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        border: 2px solid yellow;
+        width: auto;
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .restart {
+        width: 300px;
+        position: absolute;
+        letter-spacing: 0.2rem;
+
+        top: 30%;
+        left: 50%;
+        margin-left: -75px;
+
+
+
+
+    }
+
+    #restart {
+
+        background-color: #EE3E3E;
+        font-family: 'Odibee Sans', cursive;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        border: 2px solid yellow;
+        width: 10rem;
+        height: 3rem;
+    }
+
+    #winningText {
+        font-size: 4rem;
+        color: white;
+        font-family: 'Odibee Sans', cursive;
+    }
+
+}
+
+.made-by #ggab13 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.made-by #ggab13 a {
+    text-decoration: none;
+    color: black;
+}
+
+.made-by #ggab13 a:hover {
+    color: white;
+}
+
+.made-by #ggab13 #valsz {
+    color: #fcc688;
+}
+
+.made-by #ggab13 img {
+    width: 50px;
+
+}
+
+.made-by .stack img {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    margin-right: -150px;
+    z-index: -1;
+    width: 22%;
+    height: auto;
+    overflow: hidden;
+    opacity: 0.5;
+    -webkit-filter: drop-shadow(2px 2px 2px #fcc688);
+    filter: drop-shadow(2px 2px 2px #fcc688);
+    -webkit-animation: slideIn 5s;
+    animation: slideIn 5s;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0;
+        transform: scale(0, 0);
+
+
+    }
+
+    50% {}
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+
+    }
+}
+
+@keyframes start {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 1
+    }
+}
+
+@keyframes bounce {
+    100% {
+        top: 5px;
+        text-shadow: 0 1px 0 #1344F1,
+            0 2px 0 #1344F1,
+            0 3px 0 #1344F1,
+            0 4px 0 #1344F1,
+            0 5px 0 #1344F1,
+            0 6px 0 #1344F1,
+            0 7px 0 #1344F1,
+            0 8px 0 #1344F1,
+            0 9px 0 #1344F1,
+            0 50px 20px rgba(0, 0, 0, 0.2);
+    }
+}
